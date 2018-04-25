@@ -10,6 +10,7 @@ function handleRequest(request, response) {
   console.log(request);
   // Send the below string to the client when the user visits the PORT URL
   var random = Math.floor(Math.random() * 3);
+  var good = "";
   if (random == 0) {
     good = "You are amazing";
   } else if (random === 1) {
@@ -17,8 +18,8 @@ function handleRequest(request, response) {
   } else {
     good = "You are wunderbar";
   }
-  response.end("You are good");
-}
+  response.end(good);
+};
 
 function handleRequestFunny(request, response) {
   console.log(request);
