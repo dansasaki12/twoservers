@@ -9,6 +9,14 @@ var FUNNY_PORT = 7500;
 function handleRequest(request, response) {
   console.log(request);
   // Send the below string to the client when the user visits the PORT URL
+  var random = Math.floor(Math.random() * 3);
+  if (random == 0) {
+    good = "You are amazing";
+  } else if (random === 1) {
+    good = "You are awesome";
+  } else {
+    good = "You are wunderbar";
+  }
   response.end("You are good");
 }
 
